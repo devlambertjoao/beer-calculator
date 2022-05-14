@@ -3,7 +3,6 @@ const sizeElement = document.getElementById("size")
 const beerPriceElement = document.getElementById("beerPrice")
 const resultElement = document.getElementById("result")
 
-
 function calculate() {
 	const buyMessage = "Buy This Beer NOW!!!!";
 	const notBuyMessage = "Drink water! This beer is expensive :(";
@@ -25,3 +24,8 @@ sizeElement.addEventListener("change", () => calculate())
 beerPriceElement.addEventListener("change", () => calculate())
 
 calculate();
+
+
+navigator.serviceWorker && navigator.serviceWorker.register('./serviceWorker.js').then(function(registration) {  
+	console.log(`SW Registred with scope: ${registration.scope}`);
+});
