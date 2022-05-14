@@ -26,6 +26,6 @@ beerPriceElement.addEventListener("change", () => calculate())
 calculate();
 
 
-navigator.serviceWorker && navigator.serviceWorker.register('./serviceWorker.js').then(function(registration) {  
+navigator.serviceWorker && navigator.serviceWorker.register('./js/serviceWorker.js').then(function(registration) {  
 	console.log(`SW Registred with scope: ${registration.scope}`);
 });
